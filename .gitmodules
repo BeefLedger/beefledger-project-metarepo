@@ -1,3 +1,12 @@
 [submodule "holo-rea"]
 	path = holo-rea
 	url = git@github.com:holo-rea/holo-rea.git
+[submodule "multiplatform-poc"]
+	path = multiplatform-poc
+	url = git@github.com:BeefLedger/multiplatform-poc.git
+[submodule "ipfs-webservice"]
+	path = ipfs-webservice
+	url = git@github.com:BeefLedger/ipfs-webservice.git
+[submodule "scanner-android-app"]
+	path = scanner-android-app
+	url = git@github.com:BeefLedger/scanner-android-app.git
