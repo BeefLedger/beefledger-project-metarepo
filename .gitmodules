@@ -10,3 +10,6 @@
 [submodule "scanner-android-app"]
 	path = scanner-android-app
 	url = git@github.com:BeefLedger/scanner-android-app.git
+[submodule "holochain-cloud-config"]
+	path = holochain-cloud-config
+	url = git@github.com:BeefLedger/holochain-cloud-config.git
