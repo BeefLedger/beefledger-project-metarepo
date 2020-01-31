@@ -55,11 +55,15 @@ popd
 
 # Setup dependent packages
 pushd multiplatform-poc
+  git checkout master
+
   nix-shell --run 'NPM=$(which npm); $NPM link @valueflows/vf-graphql-holochain' ../holo-rea/default.nix
   nix-shell --run 'NPM=$(which npm); $NPM i' ../holo-rea/default.nix
 popd
 
 pushd ipfs-webservice
+  git checkout master
+
   nix-shell --run 'NPM=$(which npm); $NPM i' ../holo-rea/default.nix
 popd
 
