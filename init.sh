@@ -47,15 +47,20 @@ pushd holo-rea
   # yarn within holo-rea codebase
 
   nix-shell --run 'yarn'
+
+  pushd modules/vf-graphql-holochain
+    nix-shell --run 'NPM=$(which npm); sudo $NPM link' ../../default.nix
+  popd
 popd
 
 # Setup dependent packages
 pushd multiplatform-poc
-  npm i
+  nix-shell --run 'NPM=$(which npm); $NPM link @valueflows/vf-graphql-holochain' ../holo-rea/default.nix
+  nix-shell --run 'NPM=$(which npm); $NPM i' ../holo-rea/default.nix
 popd
 
 pushd ipfs-webservice
-  npm i
+  nix-shell --run 'NPM=$(which npm); $NPM i' ../holo-rea/default.nix
 popd
 
 # :TODO: Android app repo setup
